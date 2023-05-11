@@ -45,25 +45,28 @@ class _HomePageState extends State<HomePage> {
           children: [
             const DrawerHeader(
               decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    Colors.black,
-                    Colors.white,
-                  ],
-                ),
+                // gradient: LinearGradient(
+                //   begin: Alignment.topCenter,
+                //   end: Alignment.bottomCenter,
+                //   colors: [
+                //     Colors.black,
+                //     Colors.white,
+                //   ],
+                // ),
+                color: Colors.black
               ),
               child: Padding(
                 padding: EdgeInsets.only(top: 30),
                 child: Text(
-                  'EXPENSE MATE...!',
+                  'EXPENSE MATE..!',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 32,
-                    color: Colors.black,
+                    color: Colors.white,
                   ),
+                  
                 ),
+              
               ),
             ),
             ListTile(
@@ -124,7 +127,7 @@ class _HomePageState extends State<HomePage> {
               leading:
                   const Icon(Icons.feedback, color: Colors.black, size: 30),
               title: const Text(
-                'Feed Back ',
+                'Feedback ',
                 style: TextStyle(fontSize: 18, color: Colors.black),
               ),
               onTap: () {
