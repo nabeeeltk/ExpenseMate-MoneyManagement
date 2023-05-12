@@ -48,11 +48,23 @@ class _splash_screen_demoState extends State<splash_screen_demo> {
       ),
     );
   }
-  Future<void> goToHome() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    final bool a = prefs.getBool('check') ?? false;
-    await Future.delayed(Duration(seconds: 5));
-    Navigator.of(context).pushReplacement(MaterialPageRoute(
-        builder: (context) => HomePage()));
-}
+
+  void navigateToHome(BuildContext context) async {
+    var prefs = await SharedPreferences.getInstance();
+    var CheckedIn = prefs.getBool('ischeked');
+    await Future.delayed(const Duration(milliseconds: 3500));
+    if (CheckedIn == true) {
+      Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const Home_Screen(),
+          ));
+    } else {
+      Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const splash_screen_demo(),
+          ));
+    }
+  }
 }

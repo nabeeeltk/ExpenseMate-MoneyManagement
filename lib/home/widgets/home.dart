@@ -102,7 +102,7 @@ class _HomePageState extends State<HomePage> {
               leading:
                   const Icon(Icons.description, color: Colors.black, size: 30),
               title: const Text(
-                'Terms&Condetions',
+                'Terms&Conditions',
                 style: TextStyle(fontSize: 18, color: Colors.black),
               ),
               onTap: () {

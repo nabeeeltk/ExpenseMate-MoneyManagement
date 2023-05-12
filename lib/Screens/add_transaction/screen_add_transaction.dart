@@ -210,6 +210,7 @@ class _screen_add_transactionState extends State<screen_add_transaction> {
                               initialDate: DateTime.now(),
                               firstDate: DateTime.now()
                                   .subtract(const Duration(days: 60)),
+                                  
                               lastDate: DateTime.now());
                           if (_SelectedDateTemp == null) {
                             return;

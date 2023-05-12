@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:save_money/Screens/Home_Screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class splash_screen extends StatelessWidget {
+class splash_screen extends StatefulWidget {
   const splash_screen({super.key});
 
+  @override
+  State<splash_screen> createState() => _splash_screenState();
+}
+
+class _splash_screenState extends State<splash_screen> {
   @override
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
@@ -21,23 +27,25 @@ class splash_screen extends StatelessWidget {
                 decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage('images/520010-PJ0495-104.jpg'),
-                   
                     fit: BoxFit.fill,
                   ),
                 )),
-            
             Padding(
-              padding: EdgeInsets.only(left: screenWidth * 0.05, top: screenHeight * 0.08),
+              padding: EdgeInsets.only(
+                  left: screenWidth * 0.05, top: screenHeight * 0.08),
               child: Text(
                 'Let\'s\nManage\nMoney With Us',
-                style: TextStyle(fontSize: screenHeight * 0.05, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                    fontSize: screenHeight * 0.05, fontWeight: FontWeight.bold),
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: screenHeight * 0.01, left: screenWidth * 0.05),
+              padding: EdgeInsets.only(
+                  top: screenHeight * 0.01, left: screenWidth * 0.05),
               child: Text(
                 "Counter and distribute the income\ncorrectly...",
-                style: TextStyle(fontSize: screenHeight * 0.03, fontWeight: FontWeight.w500),
+                style: TextStyle(
+                    fontSize: screenHeight * 0.03, fontWeight: FontWeight.w500),
               ),
             ),
             SizedBox(height: screenHeight * 0.03),
@@ -46,8 +54,14 @@ class splash_screen extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => const Home_Screen()),
+                    MaterialPageRoute(
+                        builder: (context) => const Home_Screen()),
                   );
+                  addBoolToSF() async {
+                    SharedPreferences prefs =
+                        await SharedPreferences.getInstance();
+                    prefs.setBool('ischeked', true);
+                  }
                 },
                 child: Text(
                   'Get Started',
