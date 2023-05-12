@@ -123,20 +123,20 @@ class _HomePageState extends State<HomePage> {
                 resetAlert(context);
               },
             ),
-            ListTile(
-              leading:
-                  const Icon(Icons.feedback, color: Colors.black, size: 30),
-              title: const Text(
-                'Feedback ',
-                style: TextStyle(fontSize: 18, color: Colors.black),
-              ),
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const screen_add_transaction()));
-              },
-            ),
+            // ListTile(
+            //   leading:
+            //       const Icon(Icons.feedback, color: Colors.black, size: 30),
+            //   title: const Text(
+            //     'Feedback ',
+            //     style: TextStyle(fontSize: 18, color: Colors.black),
+            //   ),
+            //   onTap: () {
+            //     Navigator.push(
+            //         context,
+            //         MaterialPageRoute(
+            //             builder: (context) => const screen_add_transaction()));
+            //   },
+            // ),
             ListTile(
                 leading: const Icon(Icons.share, color: Colors.black, size: 30),
                 title: const Text(

@@ -48,11 +48,11 @@ class _splash_screen_demoState extends State<splash_screen_demo> {
       ),
     );
   }
-//   Future<void> goToHome() async {
-//     SharedPreferences prefs = await SharedPreferences.getInstance();
-//     final bool a = prefs.getBool('check') ?? false;
-//     await Future.delayed(Duration(seconds: 5));
-//     Navigator.of(context).pushReplacement(MaterialPageRoute(
-//         builder: (context) => HomePage()));
-// }
+  Future<void> goToHome() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    final bool a = prefs.getBool('check') ?? false;
+    await Future.delayed(Duration(seconds: 5));
+    Navigator.of(context).pushReplacement(MaterialPageRoute(
+        builder: (context) => HomePage()));
+}
 }
