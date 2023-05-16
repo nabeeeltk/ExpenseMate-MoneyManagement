@@ -144,7 +144,7 @@ class _HomePageState extends State<HomePage> {
                   style: TextStyle(fontSize: 18, color: Colors.black),
                 ),
                 onTap: () {
-                  Share.share('');
+                  Share.share('https://play.google.com/store/apps/details?id=in.brototype.example.Expence_Mate');
                 }),
             const Padding(
               padding: EdgeInsets.only(
@@ -153,7 +153,7 @@ class _HomePageState extends State<HomePage> {
               ),
               child: ListTile(
                 title: Text(
-                  "Version 0.01",
+                  "Version 1.0.0",
                   style: TextStyle(fontSize: 20, color: Colors.black26),
                 ),
               ),
