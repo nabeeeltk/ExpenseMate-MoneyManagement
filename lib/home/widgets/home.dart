@@ -144,7 +144,7 @@ class _HomePageState extends State<HomePage> {
                   style: TextStyle(fontSize: 18, color: Colors.black),
                 ),
                 onTap: () {
-                  Share.share('com.example.save_money');
+                  Share.share('');
                 }),
             const Padding(
               padding: EdgeInsets.only(
